@@ -12,10 +12,11 @@ namespace TicketProyectoP1.Models
         public string UsuarioId { get; set; }
         public virtual Usuario Usuario { get; set; } 
 
-        [Required]
-        public DateTime FechaCompra { get; set; } = DateTime.Now; 
+        [Required(ErrorMessage = "La fecha de la compra es obligatoria.")]
+        public DateTime FechaCompra { get; set; } = DateTime.Now;
 
-        [Required]
+        [Required(ErrorMessage = "El total de la compra es obligatorio.")]
+        [Range(0.01, 5.00, ErrorMessage = "El total debe ser mayor que cero y no más de 5.")]
         public decimal Total { get; set; }
 
     }

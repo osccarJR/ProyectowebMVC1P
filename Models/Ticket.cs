@@ -10,9 +10,10 @@ namespace TicketProyectoP1.Models
 
         [Required]
         public int EventoId { get; set; }
-        public virtual Evento Evento { get; set; } // Asegúrate de que exista en la BD
+        public virtual Evento Evento { get; set; } 
 
-        [Required]
+        [Required(ErrorMessage = "Es necesario especificar un precio para el ticket.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "El precio debe ser mayor que cero.")]
         public decimal Precio { get; set; }
 
     }
