@@ -1,22 +1,31 @@
+/* Establece el tamaño base de la fuente para diferentes dispositivos */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    background-color: #b0d9fa; /* Color de fondo azul claro */
+    color: #333; /* Color de texto oscuro para contraste */
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
+/* Estilos para botones y campos de formulario al enfocarse */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Ajuste para el margen inferior del cuerpo de la página */
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: inherit; /* Hereda el color de fondo de html */
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.navbar-nav .nav-link {
+    font-family: 'Arial', sans-serif; /* Fuente Arial, cambia según prefieras */
+    font-weight: bold; /* Texto en negrita */
 }
